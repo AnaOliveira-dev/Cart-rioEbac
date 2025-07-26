@@ -127,36 +127,51 @@ int excluir()
 int main ()// chama a função principal e parenteses mostra para o computador que isso é uma função. Letras minúsculas
 {
 		int laco=1;
-		for (laco=1; laco=1;)
+		char senhadigitada[15]= "a";
+		int comparacao;
+		
+		printf("\t Registro EBAC\n\n");
+		printf("\tLogin de administrador\n\nDigite sua senha: ");
+		scanf("%s",senhadigitada);
+		
+		comparacao= strcmp(senhadigitada, "admin");
+		
+	if(comparacao == 0)
 	{
+		system ("cls");
+		for (laco=1; laco=1;)
+		{		
 		int opcao=0;
- 	setlocale(LC_ALL,"Portuguese");// define Português como lingua padrão. Sempre colocar ; para encerrar o comando. O espaço antes de cada função dentro da intmain se chama Identação e serve para deixar o código mais limpo
+ 		setlocale(LC_ALL,"Portuguese");// define Português como lingua padrão. Sempre colocar ; para encerrar o comando. O espaço antes de cada função dentro da intmain se chama Identação e serve para deixar o código mais limpo
 
- 	printf ("\tBem vindo ao Registro de alunos EBAC.\n\n");// Printf traz o texto pro usuário.Os " determinam o que é o texto.\t dá um espaço.\n pula linha
- 	printf ("Para iniciar, escolha o que deseja fazer:\n");
- 	printf ("\t1.Adicionar cadastro\n");
- 	printf ("\t2.Consultar cadastro\n");
- 	printf ("\t3.Excluir cadastro \n \n");
- 	printf ("\tEscolha uma das opções: ");
- 		scanf ("%d",&opcao);// armazenar as variáveis no computador	
- 		system ("cls"); // comunica com o windows para limpar a tela para o usuário
+ 		printf ("\tBem vindo ao Registro EBAC.\n\n");// Printf traz o texto pro usuário.Os " determinam o que é o texto.\t dá um espaço.\n pula linha
+ 		printf ("Para iniciar, escolha o que deseja fazer:\n");
+ 		printf ("\t1.Adicionar cadastro\n");
+ 		printf ("\t2.Consultar cadastro\n");
+ 		printf ("\t3.Excluir cadastro \n \n");
+ 		printf ("\tEscolha uma das opções: ");
+ 			scanf ("%d",&opcao);// armazenar as variáveis no computador	
+ 			system ("cls"); // comunica com o windows para limpar a tela para o usuário
  
- 		switch (opcao)// início da seleção
- 		{	case 1:
- 			adicionar();//chamada de função
-		 	break;
+ 				switch (opcao)// início da seleção
+ 				{	case 1:
+ 					adicionar();//chamada de função
+		 			break;
 		 	
-		 	case 2:
-		 	consultar();
-			break;
+		 			case 2:
+		 			consultar();
+					break;
 			
-			case 3:
-			excluir();
-			break;
+					case 3:
+					excluir();
+					break;
 			
-			default://prevenção caso o usuário escolha uma opção errada;
-			printf ("Essa opção não é valida. Por favor, escolha uma das opções disponíveis.\n");
-			system ("pause");
+					default://prevenção caso o usuário escolha uma opção errada;
+					printf ("Essa opção não é valida. Por favor, escolha uma das opções disponíveis.\n");
+					system ("pause");
+				}
 		}
 	}
+	else
+	printf("Senha incorreta!");	
 }
