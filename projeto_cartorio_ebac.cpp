@@ -148,7 +148,8 @@ int main ()// chama a função principal e parenteses mostra para o computador que
  		printf ("Para iniciar, escolha o que deseja fazer:\n");
  		printf ("\t1.Adicionar cadastro\n");
  		printf ("\t2.Consultar cadastro\n");
- 		printf ("\t3.Excluir cadastro \n \n");
+ 		printf ("\t3.Excluir cadastro \n");
+ 		printf ("\t4.Sair do sistema\n\n");
  		printf ("\tEscolha uma das opções: ");
  			scanf ("%d",&opcao);// armazenar as variáveis no computador	
  			system ("cls"); // comunica com o windows para limpar a tela para o usuário
@@ -164,6 +165,11 @@ int main ()// chama a função principal e parenteses mostra para o computador que
 			
 					case 3:
 					excluir();
+					break;
+					
+					case 4:
+					printf("Obrigado por utilizar o sistema.");
+					return 0;
 					break;
 			
 					default://prevenção caso o usuário escolha uma opção errada;
