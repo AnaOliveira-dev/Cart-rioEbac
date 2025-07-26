@@ -17,7 +17,7 @@ int adicionar()// função responsável por registro de nomes
 	char sobrenome[40];
 	char cargo[40];
 	char telefone[20];
-	char arquivo[40];
+	char arquivo[40]; // final da criação das variáveis strings
 	
 	printf("Digite o CPF do novo cadastro:\n");// Coletando informações do usuário
 	scanf("%s",cpf);
@@ -27,7 +27,7 @@ int adicionar()// função responsável por registro de nomes
 	FILE*file;
 	file=fopen(arquivo,"w");// "w" = write, pois o dado deve ser escrito
 	fprintf(file,cpf);
-	fclose(file);
+	fclose(file);// fehca o arquivo
 	
 	file=fopen(arquivo,"a");//"a"= add, uma informação vai ser adicionada
 	fprintf(file, "\n nome:");
@@ -41,7 +41,7 @@ int adicionar()// função responsável por registro de nomes
 	fclose(file);
 	
 	file=fopen(arquivo,"a");
-	fprintf(file, ",");
+	fprintf(file, " ");
 	fclose(file);
 	
 	printf("Digite o sobrenome a ser cadastrado:\n");
@@ -151,10 +151,12 @@ int main ()// chama a função principal e parenteses mostra para o computador que
  		printf ("\t3.Excluir cadastro \n");
  		printf ("\t4.Sair do sistema\n\n");
  		printf ("\tEscolha uma das opções: ");
- 			scanf ("%d",&opcao);// armazenar as variáveis no computador	
- 			system ("cls"); // comunica com o windows para limpar a tela para o usuário
+ 			
+			 scanf ("%d",&opcao);// armazenar as variáveis no computador	
+ 			
+			 system ("cls"); // comunica com o windows para limpar a tela para o usuário
  
- 				switch (opcao)// início da seleção
+ 			 switch (opcao)// início da seleção
  				{	case 1:
  					adicionar();//chamada de função
 		 			break;
